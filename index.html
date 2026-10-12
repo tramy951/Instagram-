@@ -54,77 +54,65 @@
         </header>
 
         <!-- MAIN SCROLLABLE AREA -->
-        <main class="flex-1 overflow-y-auto no-scrollbar bg-white pb-[60px]"> <!-- pb-[60px] để không bị taskbar che -->
+        <main class="flex-1 overflow-y-auto no-scrollbar bg-white pb-[60px]"> 
 
-            <!-- BÀI ĐĂNG 1: TOKYO (CAROUSEL 3 ẢNH) -->
+            <!-- ================= BÀI ĐĂNG 1: 2 ẢNH ================= -->
             <article class="border-b border-gray-200 pb-3 bg-white">
-                <!-- Header Bài đăng -->
                 <div class="flex items-center justify-between p-3">
                     <div class="flex items-center space-x-3 cursor-pointer">
                         <div class="bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 p-[2px] rounded-full">
-                            <img src="avatar.png" alt="Avatar lilmiquela" class="w-8 h-8 rounded-full object-cover border-2 border-white" />
+                            <img src="https://ui-avatars.com/api/?name=L+M&background=random" alt="Avatar" class="w-8 h-8 rounded-full object-cover border-2 border-white" />
                         </div>
                         <div class="flex flex-col">
                             <div class="flex items-center">
                                 <span class="font-semibold text-sm mr-1">lilmiquela</span>
-                                <!-- Tích xanh -->
                                 <svg aria-label="Đã xác minh" fill="#0095F6" height="12" viewBox="0 0 40 40" width="12"><path d="M19.998 3.094 14.638 0l-2.972 5.15H5.432v6.354L0 14.64 3.094 20 0 25.359l5.432 3.137v5.905h5.975L14.638 40l5.36-3.094L25.358 40l3.232-5.6h6.162v-6.01L40 25.359 36.905 20 40 14.641l-5.248-3.03v-6.46h-6.419L25.358 0l-5.36 3.094Zm7.415 11.225 2.254 2.287-11.43 11.5-6.835-6.93 2.244-2.258 4.587 4.581 9.18-9.18Z" fill-rule="evenodd"></path></svg>
                             </div>
-                            <span class="text-[11px] text-gray-500">Được tài trợ</span>
                         </div>
                     </div>
                     <button class="text-gray-600 font-bold hover:text-black tracking-widest">...</button>
                 </div>
 
-                <!-- Carousel 3 ảnh -->
+                <!-- Carousel 2 ảnh -->
                 <div class="carousel-container relative w-full aspect-square overflow-hidden group">
                     <div class="carousel-track flex w-full h-full transition-transform duration-300 ease-in-out">
-                        <img src="lilmiquela1.1.png" class="w-full h-full object-cover flex-shrink-0" alt="Tokyo 1" />
-                        <img src="lilmiquela 1.2.png" class="w-full h-full object-cover flex-shrink-0" alt="Tokyo 2" />
-                        <img src="lilmiquela 1.3.png" class="w-full h-full object-cover flex-shrink-0" alt="Tokyo 3" />
+                        <img src="https://picsum.photos/600/600?random=11" class="w-full h-full object-cover flex-shrink-0" alt="Post 1 Image 1" />
+                        <img src="https://picsum.photos/600/600?random=12" class="w-full h-full object-cover flex-shrink-0" alt="Post 1 Image 2" />
                     </div>
-
-                    <!-- Nút Điều hướng -->
                     <button class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 text-white p-1.5 rounded-full fade-out drop-shadow-md">
                         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
                     </button>
                     <button class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 text-white p-1.5 rounded-full fade-in drop-shadow-md">
                         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
                     </button>
-
-                    <!-- Dấu chấm -->
+                    <!-- 2 Dấu chấm -->
                     <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-1.5 dots-container">
                         <div class="dot h-1.5 w-1.5 bg-blue-500 rounded-full transition-all"></div>
-                        <div class="dot h-1.5 w-1.5 bg-white/70 rounded-full transition-all"></div>
                         <div class="dot h-1.5 w-1.5 bg-white/70 rounded-full transition-all"></div>
                     </div>
                 </div>
 
-                <!-- Tương tác -->
                 <div class="px-3 pt-3">
                     <div class="flex items-center justify-between pb-2">
                         <div class="flex items-center space-x-4">
-                            <button class="like-btn text-black focus:outline-none">
-                                <svg class="heart-icon" aria-label="Thích" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z"></path></svg>
-                            </button>
-                            <button class="transition-transform hover:scale-105">
-                                <svg aria-label="Bình luận" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg>
-                            </button>
-                            <button class="transition-transform hover:scale-105">
-                                <svg aria-label="Chia sẻ" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>
-                            </button>
+                            <button class="like-btn text-black focus:outline-none"><svg class="heart-icon" aria-label="Thích" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z"></path></svg></button>
+                            <button class="transition-transform hover:scale-105"><svg aria-label="Bình luận" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg></button>
+                            <button class="transition-transform hover:scale-105"><svg aria-label="Chia sẻ" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg></button>
                         </div>
-                        <button class="transition-transform hover:scale-105">
-                            <svg aria-label="Lưu" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
-                        </button>
+                        <button class="transition-transform hover:scale-105"><svg aria-label="Lưu" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg></button>
                     </div>
                     <div class="text-[13px] font-semibold mb-1 like-count">241.053 lượt thích</div>
+                    
+                    <!-- CAPTION -->
                     <div class="text-[13px] mb-1">
-                        <span class="font-semibold mr-1">lilmiquela</span>Lost in translation nhưng lại tìm thấy chính mình ở Tokyo 🗼✨ <span class="text-blue-900 cursor-pointer">#TokyoVibes #LilMiquela</span>
+                        <span class="font-semibold mr-1">lilmiquela</span>captionnnn
                     </div>
 
-                    <!-- Khung chứa bình luận -->
-                    <div class="comments-list text-[13px] space-y-1 mt-2"></div>
+                    <!-- BÌNH LUẬN MẪU -->
+                    <div class="comments-list text-[13px] space-y-1 mt-2">
+                        <div><span class="font-semibold mr-1">user_xyz</span>commentttt</div>
+                    </div>
+                    
                     <div class="text-[10px] text-gray-500 mt-2 uppercase tracking-wide">4 GIỜ TRƯỚC</div>
                 </div>
 
@@ -135,43 +123,112 @@
                 </form>
             </article>
 
-            <!-- BÀI ĐĂNG 2: BALI (1 ẢNH) -->
+            <!-- ================= BÀI ĐĂNG 2: 2 ẢNH ================= -->
             <article class="border-b border-gray-200 pb-3 bg-white mt-1">
                 <div class="flex items-center justify-between p-3">
                     <div class="flex items-center space-x-3 cursor-pointer">
-                        <img src="avatar esther.png" alt="Avatar esther" class="w-8 h-8 rounded-full object-cover border border-gray-200" />
+                        <img src="https://ui-avatars.com/api/?name=L+M&background=random" alt="Avatar" class="w-8 h-8 rounded-full object-cover border border-gray-200" />
                         <div class="flex flex-col">
                             <div class="flex items-center">
                                 <span class="font-semibold text-sm mr-1">lilmiquela</span>
                                 <svg aria-label="Đã xác minh" fill="#0095F6" height="12" viewBox="0 0 40 40" width="12"><path d="M19.998 3.094 14.638 0l-2.972 5.15H5.432v6.354L0 14.64 3.094 20 0 25.359l5.432 3.137v5.905h5.975L14.638 40l5.36-3.094L25.358 40l3.232-5.6h6.162v-6.01L40 25.359 36.905 20 40 14.641l-5.248-3.03v-6.46h-6.419L25.358 0l-5.36 3.094Zm7.415 11.225 2.254 2.287-11.43 11.5-6.835-6.93 2.244-2.258 4.587 4.581 9.18-9.18Z" fill-rule="evenodd"></path></svg>
                             </div>
-                            <span class="text-[11px] text-gray-500">Được tài trợ</span>
                         </div>
                     </div>
                     <button class="text-gray-600 font-bold hover:text-black tracking-widest">...</button>
                 </div>
 
-                <div class="w-full aspect-square relative">
-                    <img src="watermarked_img_14359321999626983914.png" class="w-full h-full object-cover" alt="Bali" />
+                <!-- Carousel 2 ảnh -->
+                <div class="carousel-container relative w-full aspect-square overflow-hidden group">
+                    <div class="carousel-track flex w-full h-full transition-transform duration-300 ease-in-out">
+                        <img src="https://picsum.photos/600/600?random=21" class="w-full h-full object-cover flex-shrink-0" alt="Post 2 Image 1" />
+                        <img src="https://picsum.photos/600/600?random=22" class="w-full h-full object-cover flex-shrink-0" alt="Post 2 Image 2" />
+                    </div>
+                    <button class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 text-white p-1.5 rounded-full fade-out drop-shadow-md"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                    <button class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 text-white p-1.5 rounded-full fade-in drop-shadow-md"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                    <!-- 2 Dấu chấm -->
+                    <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-1.5 dots-container">
+                        <div class="dot h-1.5 w-1.5 bg-blue-500 rounded-full transition-all"></div>
+                        <div class="dot h-1.5 w-1.5 bg-white/70 rounded-full transition-all"></div>
+                    </div>
                 </div>
 
                 <div class="px-3 pt-3">
                     <div class="flex items-center justify-between pb-2">
                         <div class="flex items-center space-x-4">
-                            <button class="like-btn text-black focus:outline-none">
-                                <svg class="heart-icon" aria-label="Thích" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z"></path></svg>
-                            </button>
+                            <button class="like-btn text-black focus:outline-none"><svg class="heart-icon" aria-label="Thích" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z"></path></svg></button>
                             <button class="transition-transform hover:scale-105"><svg aria-label="Bình luận" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg></button>
                             <button class="transition-transform hover:scale-105"><svg aria-label="Chia sẻ" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg></button>
                         </div>
                         <button class="transition-transform hover:scale-105"><svg aria-label="Lưu" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg></button>
                     </div>
-                    <div class="text-[13px] font-semibold mb-1 like-count">305.890 lượt thích</div>
+                    <div class="text-[13px] font-semibold mb-1 like-count">102.345 lượt thích</div>
+                    
                     <div class="text-[13px] mb-1">
-                        <span class="font-semibold mr-1">lilmiquela</span>Cần một chút 'offline' để hòa mình vào thiên nhiên Bali. 🌴💚 <span class="text-blue-900 cursor-pointer">#BaliLife #NatureLover</span>
+                        <span class="font-semibold mr-1">lilmiquela</span>captionnnn
                     </div>
 
-                    <div class="comments-list text-[13px] space-y-1 mt-2"></div>
+                    <div class="comments-list text-[13px] space-y-1 mt-2">
+                        <div><span class="font-semibold mr-1">friend_123</span>commentttt</div>
+                    </div>
+                    <div class="text-[10px] text-gray-500 mt-2 uppercase tracking-wide">6 GIỜ TRƯỚC</div>
+                </div>
+
+                <form class="comment-form flex items-center px-3 py-2 mt-2">
+                    <img src="https://ui-avatars.com/api/?name=User&background=random&rounded=true" class="w-6 h-6 rounded-full mr-3" alt="My avatar">
+                    <input type="text" placeholder="Thêm bình luận..." class="flex-1 outline-none text-[13px] bg-transparent placeholder-gray-500 comment-input">
+                    <button type="submit" class="font-semibold text-[13px] text-blue-300 ml-2 cursor-not-allowed submit-btn" disabled>Đăng</button>
+                </form>
+            </article>
+
+            <!-- ================= BÀI ĐĂNG 3: 2 ẢNH ================= -->
+            <article class="border-b border-gray-200 pb-3 bg-white mt-1">
+                <div class="flex items-center justify-between p-3">
+                    <div class="flex items-center space-x-3 cursor-pointer">
+                        <img src="https://ui-avatars.com/api/?name=L+M&background=random" alt="Avatar" class="w-8 h-8 rounded-full object-cover border border-gray-200" />
+                        <div class="flex flex-col">
+                            <div class="flex items-center">
+                                <span class="font-semibold text-sm mr-1">lilmiquela</span>
+                                <svg aria-label="Đã xác minh" fill="#0095F6" height="12" viewBox="0 0 40 40" width="12"><path d="M19.998 3.094 14.638 0l-2.972 5.15H5.432v6.354L0 14.64 3.094 20 0 25.359l5.432 3.137v5.905h5.975L14.638 40l5.36-3.094L25.358 40l3.232-5.6h6.162v-6.01L40 25.359 36.905 20 40 14.641l-5.248-3.03v-6.46h-6.419L25.358 0l-5.36 3.094Zm7.415 11.225 2.254 2.287-11.43 11.5-6.835-6.93 2.244-2.258 4.587 4.581 9.18-9.18Z" fill-rule="evenodd"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="text-gray-600 font-bold hover:text-black tracking-widest">...</button>
+                </div>
+
+                <!-- Carousel 2 ảnh -->
+                <div class="carousel-container relative w-full aspect-square overflow-hidden group">
+                    <div class="carousel-track flex w-full h-full transition-transform duration-300 ease-in-out">
+                        <img src="https://picsum.photos/600/600?random=31" class="w-full h-full object-cover flex-shrink-0" alt="Post 3 Image 1" />
+                        <img src="https://picsum.photos/600/600?random=32" class="w-full h-full object-cover flex-shrink-0" alt="Post 3 Image 2" />
+                    </div>
+                    <button class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 text-white p-1.5 rounded-full fade-out drop-shadow-md"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                    <button class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 text-white p-1.5 rounded-full fade-in drop-shadow-md"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                    <!-- 2 Dấu chấm -->
+                    <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-1.5 dots-container">
+                        <div class="dot h-1.5 w-1.5 bg-blue-500 rounded-full transition-all"></div>
+                        <div class="dot h-1.5 w-1.5 bg-white/70 rounded-full transition-all"></div>
+                    </div>
+                </div>
+
+                <div class="px-3 pt-3">
+                    <div class="flex items-center justify-between pb-2">
+                        <div class="flex items-center space-x-4">
+                            <button class="like-btn text-black focus:outline-none"><svg class="heart-icon" aria-label="Thích" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z"></path></svg></button>
+                            <button class="transition-transform hover:scale-105"><svg aria-label="Bình luận" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg></button>
+                            <button class="transition-transform hover:scale-105"><svg aria-label="Chia sẻ" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg></button>
+                        </div>
+                        <button class="transition-transform hover:scale-105"><svg aria-label="Lưu" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg></button>
+                    </div>
+                    <div class="text-[13px] font-semibold mb-1 like-count">56.789 lượt thích</div>
+                    
+                    <div class="text-[13px] mb-1">
+                        <span class="font-semibold mr-1">lilmiquela</span>captionnnn
+                    </div>
+
+                    <div class="comments-list text-[13px] space-y-1 mt-2">
+                        <div><span class="font-semibold mr-1">fan_boy99</span>commentttt</div>
+                    </div>
                     <div class="text-[10px] text-gray-500 mt-2 uppercase tracking-wide">1 NGÀY TRƯỚC</div>
                 </div>
 
@@ -182,63 +239,54 @@
                 </form>
             </article>
 
-            <!-- BÀI ĐĂNG 3: PARIS (CAROUSEL 4 ẢNH) -->
+            <!-- ================= BÀI ĐĂNG 4: 1 VIDEO ================= -->
             <article class="border-b border-gray-200 pb-3 bg-white mt-1">
                 <div class="flex items-center justify-between p-3">
                     <div class="flex items-center space-x-3 cursor-pointer">
-                        <img src="avatar esther.png" alt="Avatar lilmiquela" class="w-8 h-8 rounded-full object-cover border border-gray-200" />
+                        <img src="https://ui-avatars.com/api/?name=L+M&background=random" alt="Avatar" class="w-8 h-8 rounded-full object-cover border border-gray-200" />
                         <div class="flex flex-col">
                             <div class="flex items-center">
                                 <span class="font-semibold text-sm mr-1">lilmiquela</span>
                                 <svg aria-label="Đã xác minh" fill="#0095F6" height="12" viewBox="0 0 40 40" width="12"><path d="M19.998 3.094 14.638 0l-2.972 5.15H5.432v6.354L0 14.64 3.094 20 0 25.359l5.432 3.137v5.905h5.975L14.638 40l5.36-3.094L25.358 40l3.232-5.6h6.162v-6.01L40 25.359 36.905 20 40 14.641l-5.248-3.03v-6.46h-6.419L25.358 0l-5.36 3.094Zm7.415 11.225 2.254 2.287-11.43 11.5-6.835-6.93 2.244-2.258 4.587 4.581 9.18-9.18Z" fill-rule="evenodd"></path></svg>
                             </div>
-                            <span class="text-[11px] text-gray-500">Được tài trợ</span>
                         </div>
                     </div>
                     <button class="text-gray-600 font-bold hover:text-black tracking-widest">...</button>
                 </div>
 
-                <div class="carousel-container relative w-full aspect-square overflow-hidden group">
-                    <div class="carousel-track flex w-full h-full transition-transform duration-300 ease-in-out">
-                        <img src="esther 1.1.png" class="w-full h-full object-cover flex-shrink-0" alt="Paris 1" />
-                        <img src="esther 1.2.png" class="w-full h-full object-cover flex-shrink-0" alt="Paris 2" />
-                        <img src="watermarked_img_11777343367971363823.png" class="w-full h-full object-cover flex-shrink-0" alt="Paris 3" />
-                        <img src="watermarked_img_888096255256027503.png" class="w-full h-full object-cover flex-shrink-0" alt="Paris 4" />
-                    </div>
-
-                    <button class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 text-white p-1.5 rounded-full fade-out drop-shadow-md">
-                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
-                    </button>
-                    <button class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 text-white p-1.5 rounded-full fade-in drop-shadow-md">
-                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
-                    </button>
-
-                    <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-1.5 dots-container">
-                        <div class="dot h-1.5 w-1.5 bg-blue-500 rounded-full transition-all"></div>
-                        <div class="dot h-1.5 w-1.5 bg-white/70 rounded-full transition-all"></div>
-                        <div class="dot h-1.5 w-1.5 bg-white/70 rounded-full transition-all"></div>
-                        <div class="dot h-1.5 w-1.5 bg-white/70 rounded-full transition-all"></div>
+                <!-- 1 Video (Không dùng carousel) -->
+                <div class="w-full aspect-square relative bg-black flex justify-center items-center">
+                    <!-- Thuộc tính autoplay loop muted playsinline giúp video tự động chạy giống reels/feed của Instagram -->
+                    <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        Trình duyệt của bạn không hỗ trợ thẻ video.
+                    </video>
+                    
+                    <!-- Icon loa mờ mờ ở góc (Tuỳ chọn - Trang trí cho giống IG) -->
+                    <div class="absolute bottom-3 right-3 bg-black/50 rounded-full p-1.5 text-white">
+                        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
                     </div>
                 </div>
 
                 <div class="px-3 pt-3">
                     <div class="flex items-center justify-between pb-2">
                         <div class="flex items-center space-x-4">
-                            <button class="like-btn text-black focus:outline-none">
-                                <svg class="heart-icon" aria-label="Thích" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z"></path></svg>
-                            </button>
+                            <button class="like-btn text-black focus:outline-none"><svg class="heart-icon" aria-label="Thích" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z"></path></svg></button>
                             <button class="transition-transform hover:scale-105"><svg aria-label="Bình luận" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg></button>
                             <button class="transition-transform hover:scale-105"><svg aria-label="Chia sẻ" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg></button>
                         </div>
                         <button class="transition-transform hover:scale-105"><svg aria-label="Lưu" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg></button>
                     </div>
-                    <div class="text-[13px] font-semibold mb-1 like-count">512.980 lượt thích</div>
+                    <div class="text-[13px] font-semibold mb-1 like-count">88.112 lượt thích</div>
+                    
                     <div class="text-[13px] mb-1">
-                        <span class="font-semibold mr-1">lilmiquela</span>Parisian diaries 🥐🎨 Thành phố này thực sự biết cách đánh cắp trái tim. Bonsoir Paris! 🇫🇷🥂 <span class="text-blue-900 cursor-pointer">#ParisianVibes</span>
+                        <span class="font-semibold mr-1">lilmiquela</span>captionnnn
                     </div>
 
-                    <div class="comments-list text-[13px] space-y-1 mt-2"></div>
-                    <div class="text-[10px] text-gray-500 mt-2 uppercase tracking-wide">3 NGÀY TRƯỚC</div>
+                    <div class="comments-list text-[13px] space-y-1 mt-2">
+                        <div><span class="font-semibold mr-1">video_lover</span>commentttt</div>
+                    </div>
+                    <div class="text-[10px] text-gray-500 mt-2 uppercase tracking-wide">2 NGÀY TRƯỚC</div>
                 </div>
 
                 <form class="comment-form flex items-center px-3 py-2 mt-2">
@@ -273,7 +321,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
-            // 1. CAROUSEL LOGIC (Trượt ảnh)
+            // 1. CAROUSEL LOGIC (Trượt ảnh tự động đếm số lượng ảnh)
             const carousels = document.querySelectorAll('.carousel-container');
             carousels.forEach(container => {
                 const track = container.querySelector('.carousel-track');
