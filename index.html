@@ -25,12 +25,32 @@
             animation: pop 0.3s ease-in-out;
         }
 
+        /* Carousel Styles */
+        .carousel-container { position: relative; overflow: hidden; }
+        .carousel-track {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease-in-out;
+        }
+        .carousel-slide {
+            flex: 0 0 100%;
+            width: 100%;
+            height: 100%;
+        }
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
         /* Ẩn hiện mượt mà nút mũi tên carousel */
         .fade-in { opacity: 1; pointer-events: auto; transition: opacity 0.2s; }
         .fade-out { opacity: 0; pointer-events: none; transition: opacity 0.2s; }
     </style>
 </head>
-<body class="bg-gray-100 flex justify-center h-[100dvh] font-sans text-black overflow-hidden">
+<body class="bg-gray-100 flex justify-center h-screen font-sans text-black overflow-hidden">
 
     <!-- Vùng Container chính (Mobile Size căn giữa) -->
     <div class="w-full max-w-[470px] bg-white flex flex-col h-full sm:border-x sm:border-gray-300 sm:shadow-2xl relative">
@@ -61,7 +81,8 @@
                 <div class="flex items-center justify-between p-3">
                     <div class="flex items-center space-x-3 cursor-pointer">
                         <div class="bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 p-[2px] rounded-full">
-                            <img src="avatar.png" alt="Avatar" class="w-8 h-8 rounded-full object-cover border-2 border-white" />
+                            <!-- Đã thay bằng link ảnh mẫu để luôn hiển thị avatar -->
+                            <img src="https://i.pravatar.cc/150?img=47" alt="Avatar" class="w-8 h-8 rounded-full object-cover border-2 border-white" />
                         </div>
                         <div class="flex flex-col">
                             <div class="flex items-center">
@@ -73,12 +94,19 @@
                     <button class="text-gray-600 font-bold hover:text-black tracking-widest">...</button>
                 </div>
 
-                <!-- Carousel 3 ảnh -->
-                <div class="carousel-container relative w-full aspect-square overflow-hidden group">
-                    <div class="carousel-track flex w-full h-full transition-transform duration-300 ease-in-out">
-                        <img src="lilmiquela1.1.png" class="w-full h-full object-cover flex-shrink-0" alt="Post 1 Image 1" />
-                        <img src="lilmiquela 1.2.png" class="w-full h-full object-cover flex-shrink-0" alt="Post 1 Image 2" />
-                        <img src="lilmiquela 1.3.png" class="w-full h-full object-cover flex-shrink-0" alt="Post 1 Image 3" />
+                <!-- Carousel 3 ảnh (Đã sửa CSS Track) -->
+                <div class="carousel-container relative w-full aspect-square group bg-gray-100">
+                    <div class="carousel-track">
+                        <div class="carousel-slide">
+                             <!-- Lưu ý: Mình thay tạm ảnh mẫu để bạn thấy Carousel hoạt động. Nhớ đổi lại tên ảnh của bạn nhé -->
+                             <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500&h=500&fit=crop" alt="Post 1 Image 1" />
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&h=500&fit=crop" alt="Post 1 Image 2" />
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500&h=500&fit=crop" alt="Post 1 Image 3" />
+                        </div>
                     </div>
                     <button class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 text-white p-1.5 rounded-full fade-out drop-shadow-md">
                         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
@@ -129,7 +157,8 @@
             <article class="border-b border-gray-200 pb-3 bg-white mt-1">
                 <div class="flex items-center justify-between p-3">
                     <div class="flex items-center space-x-3 cursor-pointer">
-                        <img src="avatar.png" alt="Avatar" class="w-8 h-8 rounded-full object-cover border border-gray-200" />
+                         <!-- Đã thay avatar mẫu -->
+                        <img src="https://i.pravatar.cc/150?img=47" alt="Avatar" class="w-8 h-8 rounded-full object-cover border border-gray-200" />
                         <div class="flex flex-col">
                             <div class="flex items-center">
                                 <span class="font-semibold text-sm mr-1">lilmiquela</span>
@@ -141,10 +170,14 @@
                 </div>
 
                 <!-- Carousel 2 ảnh -->
-                <div class="carousel-container relative w-full aspect-square overflow-hidden group">
-                    <div class="carousel-track flex w-full h-full transition-transform duration-300 ease-in-out">
-                        <img src="lilmiquela 2.1.png" class="w-full h-full object-cover flex-shrink-0" alt="Post 2 Image 1" />
-                        <img src="lilmiquela 2.2" class="w-full h-full object-cover flex-shrink-0" alt="Post 2 Image 2" />
+                <div class="carousel-container relative w-full aspect-square group bg-gray-100">
+                    <div class="carousel-track">
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500&h=500&fit=crop" alt="Post 2 Image 1" />
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&h=500&fit=crop" alt="Post 2 Image 2" />
+                        </div>
                     </div>
                     <button class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 text-white p-1.5 rounded-full fade-out drop-shadow-md"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                     <button class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 text-white p-1.5 rounded-full fade-in drop-shadow-md"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
@@ -183,11 +216,11 @@
                 </form>
             </article>
 
-            <!-- ================= BÀI ĐĂNG 3: 3 ẢNH ================= -->
+            <!-- ================= BÀI ĐĂNG 3: 2 ẢNH ================= -->
             <article class="border-b border-gray-200 pb-3 bg-white mt-1">
                 <div class="flex items-center justify-between p-3">
                     <div class="flex items-center space-x-3 cursor-pointer">
-                        <img src="avatar.png" alt="Avatar" class="w-8 h-8 rounded-full object-cover border border-gray-200" />
+                        <img src="https://i.pravatar.cc/150?img=47" alt="Avatar" class="w-8 h-8 rounded-full object-cover border border-gray-200" />
                         <div class="flex flex-col">
                             <div class="flex items-center">
                                 <span class="font-semibold text-sm mr-1">lilmiquela</span>
@@ -198,19 +231,21 @@
                     <button class="text-gray-600 font-bold hover:text-black tracking-widest">...</button>
                 </div>
 
-                <!-- Carousel 3 ảnh -->
-                <div class="carousel-container relative w-full aspect-square overflow-hidden group">
-                    <div class="carousel-track flex w-full h-full transition-transform duration-300 ease-in-out">
-                        <img src="lilmiquela 3.1.png" class="w-full h-full object-cover flex-shrink-0" alt="Post 3 Image 1" />
-                        <img src="Lilmiquela 3.2.png" class="w-full h-full object-cover flex-shrink-0" alt="Post 3 Image 2" />
-                        <img src="Lilmiquela 3.3.png" class="w-full h-full object-cover flex-shrink-0" alt="Post 3 Image 3" />
+                <!-- Carousel 2 ảnh -->
+                <div class="carousel-container relative w-full aspect-square group bg-gray-100">
+                    <div class="carousel-track">
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500&h=500&fit=crop" alt="Post 3 Image 1" />
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&h=500&fit=crop" alt="Post 3 Image 2" />
+                        </div>
                     </div>
                     <button class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 text-white p-1.5 rounded-full fade-out drop-shadow-md"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                     <button class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 text-white p-1.5 rounded-full fade-in drop-shadow-md"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
-                    <!-- 3 Dấu chấm -->
+                    <!-- 2 Dấu chấm -->
                     <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-1.5 dots-container">
                         <div class="dot h-1.5 w-1.5 bg-blue-500 rounded-full transition-all"></div>
-                        <div class="dot h-1.5 w-1.5 bg-white/70 rounded-full transition-all"></div>
                         <div class="dot h-1.5 w-1.5 bg-white/70 rounded-full transition-all"></div>
                     </div>
                 </div>
@@ -243,11 +278,11 @@
                 </form>
             </article>
 
-            <!-- ================= BÀI ĐĂNG 4: 1 VIDEO (YOUTUBE SHORTS) ================= -->
+            <!-- ================= BÀI ĐĂNG 4: 1 VIDEO YOUTUBE ================= -->
             <article class="border-b border-gray-200 pb-3 bg-white mt-1">
                 <div class="flex items-center justify-between p-3">
                     <div class="flex items-center space-x-3 cursor-pointer">
-                        <img src="avatar.png" alt="Avatar" class="w-8 h-8 rounded-full object-cover border border-gray-200" />
+                        <img src="https://i.pravatar.cc/150?img=47" alt="Avatar" class="w-8 h-8 rounded-full object-cover border border-gray-200" />
                         <div class="flex flex-col">
                             <div class="flex items-center">
                                 <span class="font-semibold text-sm mr-1">lilmiquela</span>
@@ -258,9 +293,9 @@
                     <button class="text-gray-600 font-bold hover:text-black tracking-widest">...</button>
                 </div>
 
-                <!-- KHU VỰC VIDEO (Đã chỉnh sửa để hiển thị chuẩn dọc 4:5 - Không bị cắt xén) -->
-                <div class="w-full aspect-[4/5] relative bg-black flex justify-center items-center overflow-hidden">
-                    <div class="w-full h-full pointer-events-none absolute inset-0">
+                <!-- Thay đổi thành video dọc YouTube -->
+                <div class="w-full aspect-[9/16] relative bg-black flex justify-center items-center overflow-hidden">
+                    <div class="w-full h-full pointer-events-none">
                         <iframe 
                             class="w-full h-full" 
                             src="https://www.youtube.com/embed/Sdp_oUMFJgY?autoplay=1&mute=1&loop=1&playlist=Sdp_oUMFJgY&controls=0&showinfo=0&rel=0&modestbranding=1" 
@@ -274,14 +309,14 @@
                 <div class="p-3">
                     <div class="flex items-center justify-between mb-2">
                         <div class="flex space-x-4">
-                            <button class="like-btn text-black focus:outline-none"><svg class="heart-icon" aria-label="Thích" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z"></path></svg></button>
+                            <button class="like-btn text-black focus:outline-none"><svg class="heart-icon" aria-label="Thích" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.67 2.161 4.21 4.21 0 0 1 3.67-2.161M12 2.19c-1.921 0-3.67 1.05-4.5 2.766a5.193 5.193 0 0 0-4.5-2.766 6.983 6.983 0 0 0-7 7.234c0 4.261 3.42 6.84 6.758 9.8 2.453 2.176 3.865 3.431 4.542 3.868a.754.754 0 0 0 .8 0c.677-.437 2.089-1.692 4.542-3.868 3.338-2.96 6.758-5.539 6.758-9.8a6.983 6.983 0 0 0-7-7.234Z"></path></svg></button>
                             <button class="transition-transform hover:scale-105"><svg aria-label="Bình luận" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg></button>
                             <button class="transition-transform hover:scale-105"><svg aria-label="Chia sẻ bài viết" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg></button>
                         </div>
                         <button class="transition-transform hover:scale-105"><svg aria-label="Lưu" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg></button>
                     </div>
                     
-                    <p class="font-semibold text-[13px] mb-1 like-count">88.112 lượt thích</p>
+                    <p class="font-semibold text-sm mb-1 like-count">88.112 lượt thích</p>
                     
                     <div class="text-[13px] mb-1">
                         <span class="font-semibold mr-1">lilmiquela</span>captionnnn
@@ -293,7 +328,7 @@
                     
                     <div class="text-[10px] text-gray-500 mt-2 uppercase tracking-wide">2 NGÀY TRƯỚC</div>
                 </div>
-                
+
                 <form class="comment-form flex items-center px-3 py-2 mt-2">
                     <img src="https://ui-avatars.com/api/?name=User&background=random&rounded=true" class="w-6 h-6 rounded-full mr-3" alt="My avatar">
                     <input type="text" placeholder="Thêm bình luận..." class="flex-1 outline-none text-[13px] bg-transparent placeholder-gray-500 comment-input">
@@ -304,4 +339,138 @@
         </main>
 
         <!-- NAV CỐ ĐỊNH (BOTTOM TASKBAR) -->
-        <nav class="absolute bottom-0 w-full bg-white border-t border-gray-200 flex justify-between items-center px-6 py
+        <nav class="absolute bottom-0 w-full bg-white border-t border-gray-200 flex justify-between items-center px-6 py-2 z-50 h-[50px] pb-safe">
+            <button class="text-black transition-transform hover:scale-110">
+                <svg aria-label="Trang chủ" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M22 23h-6.001a1 1 0 0 1-1-1v-5.455a2.997 2.997 0 1 0-5.993 0V22a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V11.543a1.002 1.002 0 0 1 .31-.724l10-9.543a1.001 1.001 0 0 1 1.38 0l10 9.543a1.002 1.002 0 0 1 .31.724V22a1 1 0 0 1-1 1Z"></path></svg>
+            </button>
+            <button class="text-black transition-transform hover:scale-110">
+                <svg aria-label="Tìm kiếm" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M19 10.5A8.5 8.5 0 1 1 10.5 2a8.5 8.5 0 0 1 8.5 8.5Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="16.511" x2="22" y1="16.511" y2="22"></line></svg>
+            </button>
+            <button class="text-black transition-transform hover:scale-110">
+                <svg aria-label="Tạo mới" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M2 12v3.45c0 2.849.698 4.005 1.606 4.944.94.909 2.098 1.608 4.946 1.608h6.896c2.848 0 4.006-.7 4.946-1.608C21.302 19.455 22 18.299 22 15.45V8.552c0-2.849-.698-4.006-1.606-4.945C19.454 2.7 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.547 2 5.703 2 8.552Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="6.545" x2="17.455" y1="12.001" y2="12.001"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="12.003" x2="12.003" y1="6.545" y2="17.455"></line></svg>
+            </button>
+            <button class="text-black transition-transform hover:scale-110">
+                <svg aria-label="Reels" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="2.049" x2="21.95" y1="7.002" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="13.504" x2="16.362" y1="2.001" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="7.207" x2="10.002" y1="2.11" y2="7.002"></line><path d="M2 12.001v3.449c0 2.849.698 4.006 1.606 4.945.94.908 2.098 1.607 4.946 1.607h6.896c2.848 0 4.006-.7 4.946-1.607.908-.939 1.606-2.096 1.606-4.945V8.552c0-2.848-.698-4.006-1.606-4.945C19.454 2.7 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.546 2 5.704 2 8.552Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M9.763 17.664a.908.908 0 0 1-.454-.787V11.63a.909.909 0 0 1 1.364-.788l4.545 2.624a.909.909 0 0 1 0 1.575l-4.545 2.624a.91.91 0 0 1-.91 0Z" fill-rule="evenodd"></path></svg>
+            </button>
+            <button class="text-black transition-transform hover:scale-110">
+                <img src="https://ui-avatars.com/api/?name=User&background=random&rounded=true" class="w-6 h-6 rounded-full object-cover border border-gray-300" alt="My Profile" />
+            </button>
+        </nav>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // 1. CAROUSEL LOGIC
+            const carousels = document.querySelectorAll('.carousel-container');
+            carousels.forEach(container => {
+                const track = container.querySelector('.carousel-track');
+                const prevBtn = container.querySelector('.carousel-prev');
+                const nextBtn = container.querySelector('.carousel-next');
+                const dots = container.querySelectorAll('.dot');
+
+                if (!track || !prevBtn || !nextBtn) return;
+
+                const slideCount = track.children.length;
+                let currentIndex = 0;
+
+                const updateCarousel = () => {
+                    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+                    prevBtn.className = `carousel-prev absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 text-white p-1.5 rounded-full drop-shadow-md ${currentIndex === 0 ? 'fade-out' : 'fade-in'}`;
+                    nextBtn.className = `carousel-next absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 text-white p-1.5 rounded-full drop-shadow-md ${currentIndex === slideCount - 1 ? 'fade-out' : 'fade-in'}`;
+
+                    dots.forEach((dot, idx) => {
+                        if (idx === currentIndex) {
+                            dot.classList.replace('bg-white/70', 'bg-blue-500');
+                        } else {
+                            dot.classList.replace('bg-blue-500', 'bg-white/70');
+                        }
+                    });
+                };
+
+                nextBtn.addEventListener('click', () => {
+                    if (currentIndex < slideCount - 1) {
+                        currentIndex++;
+                        updateCarousel();
+                    }
+                });
+
+                prevBtn.addEventListener('click', () => {
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                        updateCarousel();
+                    }
+                });
+            });
+
+            // 2. LIKE LOGIC
+            const likeBtns = document.querySelectorAll('.like-btn');
+            likeBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const icon = this.querySelector('.heart-icon');
+                    const filledPath = `<path d="M3.465 14.502C1.468 12.553 0 10.198 0 7.222 0 3.904 2.652 1.05 5.753 1.05c2.378 0 4.195 1.155 5.586 2.923C12.73 2.205 14.547 1.05 16.925 1.05 20.026 1.05 22.678 3.904 22.678 7.222c0 2.976-1.468 5.331-3.465 7.28L11.339 22.186l-7.874-7.684Z"></path>`;
+                    const outlinePath = `<path d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z"></path>`;
+
+                    const isLiked = this.classList.contains('text-red-500');
+                    const post = this.closest('article');
+                    const likeCountEl = post.querySelector('.like-count');
+                    let count = parseInt(likeCountEl.innerText.replace(/[^0-9]/g, ''));
+
+                    if (isLiked) {
+                        this.classList.remove('text-red-500');
+                        icon.innerHTML = outlinePath;
+                        count--;
+                    } else {
+                        this.classList.add('text-red-500');
+                        icon.innerHTML = filledPath;
+                        count++;
+
+                        icon.classList.remove('animate-pop');
+                        void icon.offsetWidth; 
+                        icon.classList.add('animate-pop');
+                    }
+                    likeCountEl.innerText = count.toLocaleString('vi-VN') + " lượt thích";
+                });
+            });
+
+            // 3. COMMENT LOGIC
+            const commentForms = document.querySelectorAll('.comment-form');
+            commentForms.forEach(form => {
+                const input = form.querySelector('.comment-input');
+                const submitBtn = form.querySelector('.submit-btn');
+
+                input.addEventListener('input', () => {
+                    if (input.value.trim().length > 0) {
+                        submitBtn.classList.replace('text-blue-300', 'text-blue-500');
+                        submitBtn.classList.remove('cursor-not-allowed');
+                        submitBtn.disabled = false;
+                    } else {
+                        submitBtn.classList.replace('text-blue-500', 'text-blue-300');
+                        submitBtn.classList.add('cursor-not-allowed');
+                        submitBtn.disabled = true;
+                    }
+                });
+
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const text = input.value.trim();
+                    if (!text) return;
+
+                    const post = form.closest('article');
+                    const commentsList = post.querySelector('.comments-list');
+
+                    const newComment = document.createElement('div');
+                    newComment.innerHTML = `<span class="font-semibold mr-1">you</span><span>${text}</span>`;
+                    commentsList.appendChild(newComment);
+
+                    input.value = '';
+                    submitBtn.classList.replace('text-blue-500', 'text-blue-300');
+                    submitBtn.classList.add('cursor-not-allowed');
+                    submitBtn.disabled = true;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
