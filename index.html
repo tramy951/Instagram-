@@ -129,7 +129,7 @@
             <article class="border-b border-gray-200 pb-3 bg-white mt-1">
                 <div class="flex items-center justify-between p-3">
                     <div class="flex items-center space-x-3 cursor-pointer">
-                        <img src="https://ui-avatars.com/api/?name=L+M&background=random" alt="Avatar" class="w-8 h-8 rounded-full object-cover border border-gray-200" />
+                        <img src="avatar.png" alt="Avatar" class="w-8 h-8 rounded-full object-cover border border-gray-200" />
                         <div class="flex flex-col">
                             <div class="flex items-center">
                                 <span class="font-semibold text-sm mr-1">lilmiquela</span>
@@ -187,7 +187,7 @@
             <article class="border-b border-gray-200 pb-3 bg-white mt-1">
                 <div class="flex items-center justify-between p-3">
                     <div class="flex items-center space-x-3 cursor-pointer">
-                        <img src="https://ui-avatars.com/api/?name=L+M&background=random" alt="Avatar" class="w-8 h-8 rounded-full object-cover border border-gray-200" />
+                        <img src="avatar.png" alt="Avatar" class="w-8 h-8 rounded-full object-cover border border-gray-200" />
                         <div class="flex flex-col">
                             <div class="flex items-center">
                                 <span class="font-semibold text-sm mr-1">lilmiquela</span>
@@ -201,8 +201,9 @@
                 <!-- Carousel 2 ảnh -->
                 <div class="carousel-container relative w-full aspect-square overflow-hidden group">
                     <div class="carousel-track flex w-full h-full transition-transform duration-300 ease-in-out">
-                        <img src="https://picsum.photos/600/600?random=31" class="w-full h-full object-cover flex-shrink-0" alt="Post 3 Image 1" />
-                        <img src="https://picsum.photos/600/600?random=32" class="w-full h-full object-cover flex-shrink-0" alt="Post 3 Image 2" />
+                        <img src="lilmiquela 3.1.png" class="w-full h-full object-cover flex-shrink-0" alt="Post 3 Image 1" />
+                        <img src="Lilmiquela 3.2.png" class="w-full h-full object-cover flex-shrink-0" alt="Post 3 Image 2" />
+                        <img src="Lilmiquela 3.3.png" class="w-full h-full object-cover flex-shrink-0" alt="Post 3 Image 3" />
                     </div>
                     <button class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 text-white p-1.5 rounded-full fade-out drop-shadow-md"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                     <button class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 text-white p-1.5 rounded-full fade-in drop-shadow-md"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
@@ -245,7 +246,7 @@
             <article class="border-b border-gray-200 pb-3 bg-white mt-1">
                 <div class="flex items-center justify-between p-3">
                     <div class="flex items-center space-x-3 cursor-pointer">
-                        <img src="https://ui-avatars.com/api/?name=L+M&background=random" alt="Avatar" class="w-8 h-8 rounded-full object-cover border border-gray-200" />
+                        <img src="avatar.png" alt="Avatar" class="w-8 h-8 rounded-full object-cover border border-gray-200" />
                         <div class="flex flex-col">
                             <div class="flex items-center">
                                 <span class="font-semibold text-sm mr-1">lilmiquela</span>
@@ -259,11 +260,15 @@
                 <!-- 1 Video (Không dùng carousel) -->
                 <div class="w-full aspect-square relative bg-black flex justify-center items-center">
                     <!-- Thuộc tính autoplay loop muted playsinline giúp video tự động chạy giống reels/feed của Instagram -->
-                    <video class="w-full h-full object-cover" autoplay loop muted playsinline>
-                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                        Trình duyệt của bạn không hỗ trợ thẻ video.
-                    </video>
-                    
+                <div class="relative w-full h-full overflow-hidden pointer-events-none">
+    <iframe 
+        class="absolute top-1/2 left-1/2 w-[300vw] h-[300vh] min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover" 
+        src="https://youtube.com/shorts/Sdp_oUMFJgY?feature=share" 
+        frameborder="0" 
+        allow="autoplay; encrypted-media" 
+        allowfullscreen>
+    </iframe>
+</div>
                     <!-- Icon loa mờ mờ ở góc (Tuỳ chọn - Trang trí cho giống IG) -->
                     <div class="absolute bottom-3 right-3 bg-black/50 rounded-full p-1.5 text-white">
                         <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
