@@ -243,32 +243,34 @@
             </article>
 
             <!-- ================= BÀI ĐĂNG 4: 1 VIDEO ================= -->
-            <article class="border-b border-gray-200 pb-3 bg-white mt-1">
-                <div class="flex items-center justify-between p-3">
-                    <div class="flex items-center space-x-3 cursor-pointer">
-                        <img src="avatar.png" alt="Avatar" class="w-8 h-8 rounded-full object-cover border border-gray-200" />
-                        <div class="flex flex-col">
-                            <div class="flex items-center">
-                                <span class="font-semibold text-sm mr-1">lilmiquela</span>
-                                <svg aria-label="Đã xác minh" fill="#0095F6" height="12" viewBox="0 0 40 40" width="12"><path d="M19.998 3.094 14.638 0l-2.972 5.15H5.432v6.354L0 14.64 3.094 20 0 25.359l5.432 3.137v5.905h5.975L14.638 40l5.36-3.094L25.358 40l3.232-5.6h6.162v-6.01L40 25.359 36.905 20 40 14.641l-5.248-3.03v-6.46h-6.419L25.358 0l-5.36 3.094Zm7.415 11.225 2.254 2.287-11.43 11.5-6.835-6.93 2.244-2.258 4.587 4.581 9.18-9.18Z" fill-rule="evenodd"></path></svg>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="text-gray-600 font-bold hover:text-black tracking-widest">...</button>
+<article class="border-b border-gray-200 pb-3 bg-white mt-1">
+    <div class="flex items-center justify-between p-3">
+        <div class="flex items-center space-x-3 cursor-pointer">
+            <img src="avatar.png" alt="Avatar" class="w-8 h-8 rounded-full object-cover border border-gray-200" />
+            <div class="flex flex-col">
+                <div class="flex items-center">
+                    <span class="font-semibold text-sm mr-1">lilmiquela</span>
+                    <svg aria-label="Đã xác minh" fill="#0095F6" height="12" viewBox="0 0 40 40" width="12"><path d="M19.998 3.094 14.638 0l-2.972 5.15H5.432v6.354L0 14.64 3.094 20 0 25.359l5.432 3.137v5.905h5.975L14.638 40l5.36-3.094L25.358 40l3.232-5.6h6.162v-6.01L40 25.359 36.905 20 40 14.641l-5.248-3.03v-6.46h-6.419L25.358 0l-5.36 3.094Zm7.415 11.225 2.254 2.287-11.43 11.5-6.835-6.93 2.244-2.258 4.587 4.581 9.18-9.18Z" fill-rule="evenodd"></path></svg>
                 </div>
+            </div>
+        </div>
+        <button class="text-gray-600 font-bold hover:text-black tracking-widest">...</button>
+    </div>
 
-                <!-- 1 Video (Không dùng carousel) -->
-                <div class="w-full aspect-square relative bg-black flex justify-center items-center">
-                    <!-- Thuộc tính autoplay loop muted playsinline giúp video tự động chạy giống reels/feed của Instagram -->
-              <div class="relative w-full h-full overflow-hidden pointer-events-none">
-    <iframe 
-        class="absolute top-1/2 left-1/2 w-[300vw] h-[300vh] min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover" 
-        src="https://www.youtube.com/embed/Sdp_oUMFJgY?autoplay=1&mute=1&loop=1&playlist=Sdp_oUMFJgY&controls=0&showinfo=0&rel=0" 
-        frameborder="0" 
-        allow="autoplay; encrypted-media" 
-        allowfullscreen>
-    </iframe>
-</div>
+    <!-- Khung chứa 1:1 (Square) -->
+    <div class="w-full aspect-square relative bg-black flex justify-center items-center overflow-hidden">
+        <!-- Trình phát video YouTube với tỉ lệ vừa vặn -->
+        <div class="w-full h-full pointer-events-none">
+            <iframe 
+                class="w-full h-full" 
+                src="https://www.youtube.com/embed/Sdp_oUMFJgY?autoplay=1&mute=1&loop=1&playlist=Sdp_oUMFJgY&controls=0&showinfo=0&rel=0&modestbranding=1" 
+                frameborder="0" 
+                allow="autoplay; encrypted-media" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</article>
                     <!-- Icon loa mờ mờ ở góc (Tuỳ chọn - Trang trí cho giống IG) -->
                     <div class="absolute bottom-3 right-3 bg-black/50 rounded-full p-1.5 text-white">
                         <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
